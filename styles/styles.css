@@ -2,6 +2,8 @@ body {
     /* font-family: 'Cangste', sans-serif; */
     font-family: 'agright', sans-serif;
     overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
     width: 100vw;
     background: linear-gradient(0.25turn, #0A0222, #0A0222, #12063C);
 }
@@ -46,6 +48,9 @@ body {
 
 .view {
     background: linear-gradient(0.25turn, #0A0222, #0A0222, #12063C);
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 .container {display: none; overflow-x: hidden;}
 
