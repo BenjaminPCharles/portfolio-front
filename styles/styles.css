@@ -46,18 +46,18 @@ body {
     transition: width .5s ease-in-out;
 }
 
-.view {
+/* .view { */
     /* background: linear-gradient(0.25turn, #0A0222, #0A0222, #12063C); */
-    overflow-x: hidden;
+    /* overflow-x: hidden;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
-}
+} */
 .container {
     display: none;
     overflow-x: hidden;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
-    height: 400vh;
+    height: auto;
 }
 
 /* HEADER */
@@ -819,16 +819,16 @@ body {
     /* .home {
         height: 1vh;        
     } */
-    /* .description {
-        height: auto;
-        margin: 6em 0;
-    } */
+    .description {
+        height: 100vh;
+        /* margin: 6em 0; */
+    }
     .projet {
         height: auto;
         padding: 10px 0;
     }
     .contact {
-        height: 99vh;
+        height: 100vh;
     }
 
     .projet {
