@@ -47,7 +47,7 @@ body {
 }
 
 .view {
-    background: linear-gradient(0.25turn, #0A0222, #0A0222, #12063C);
+    /* background: linear-gradient(0.25turn, #0A0222, #0A0222, #12063C); */
     overflow-x: hidden;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
@@ -57,13 +57,14 @@ body {
     overflow-x: hidden;
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
+    height: 400vh;
 }
 
 /* HEADER */
 
 
 .view__header {
-    height: 5vh;
+    /* height: 5vh; */
     display: flex;
     /* justify-content: space-between; */
     justify-content: flex-end;
@@ -815,15 +816,16 @@ body {
         margin: 2em;
     }
 
-    .home {
-        height: 99vh;        
-    }
-    .description {
+    /* .home {
+        height: 1vh;        
+    } */
+    /* .description {
         height: auto;
         margin: 6em 0;
-    }
+    } */
     .projet {
         height: auto;
+        padding: 10px 0;
     }
     .contact {
         height: 99vh;
