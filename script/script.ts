@@ -127,7 +127,7 @@ const app : {
             menuHow.innerText = "How to contact me ?";
             work.innerText = "Web developer";
             title.innerText = "Who am I ?";
-            text.innerText = "My name is Benjamin. I'm 30 and I live in south of France. After a year of self-directed learning then O'clock's formation, finally I can say that I'm a junior web developer. When I was young I always had a passion for softwares and video games, it's with determination that I am comming on the job market. Joyful, I'm exciting of joining a new team.";
+            text.innerText = "My name is Benjamin. I'm 30 and I live in south of France. After a year of self-directed learning then O'clock's formation, finally I can say that I'm a junior web developer. When I was young I always had a passion for softwares and video games, it's with determination that I am coming on the job market. Joyful, I'm exciting of joining a new team.";
             detailEnglish1.innerText = "Jan Ken Pon is actually Rock Paper Scissors in Japanese that's is the reference of <hunter X hunter> manga. It's my first project, there I put into practice my knowledge at this time about html, css and javascript.";
             detailEnglish2.innerText = "After my work on <Jan Ken Pon> I looked for a hardest project with algorithms. So I began to code this project without a lot of styles but more javascript.";
             detailEnglish3.innerText = "I was really proud when I made it because I worked on my all brand new knowledge. I began to learn back-end development, that is my first project with data base. I used postgres, node, express, ejs and bcrypt. There are a super user and only him can add manga.";
