@@ -52,7 +52,12 @@ body {
     overflow-y: scroll;
     -webkit-overflow-scrolling: touch;
 }
-.container {display: none; overflow-x: hidden;}
+.container {
+    display: none;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
+}
 
 /* HEADER */
 
