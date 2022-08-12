@@ -63,6 +63,9 @@ body {
     /* justify-content: space-between; */
     justify-content: flex-end;
     align-items: center;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    -webkit-overflow-scrolling: touch;
 }
 .view__header__title {
     color: #FFF;
