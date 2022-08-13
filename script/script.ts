@@ -7,28 +7,45 @@ const app : {
     englishLanguage: any,
 } = {
     clickOnMenuBurger: function() {
-        const menuBurger = document.querySelector<HTMLInputElement>('.view__header__menu');
-        const menu = document.querySelector<HTMLInputElement>('.view__home__main__right--burger--is--open');
-        if( menuBurger != null && menu != null ){
-            menuBurger.addEventListener('click', function handleClick() {
-                if(menu.style.transform === "translateX(300px)"){
-                    menu.style.transform = "translateX(0px)";
-                    menu.style.transition =  "transform ease-in .5s";
-                } else {
-                    menu.style.transform = "translateX(300px)";
-                    menu.style.transition = "transform ease-in .5s";
-                };
-            });
-        };
+        const menuBurger = document.querySelector<HTMLInputElement>('.view__header__menu')!;
+        const fshfjk = document.querySelectorAll('.view__header__menu__burger') as NodeListOf<HTMLInputElement>;
+        const menu = document.querySelector<HTMLInputElement>('.view__home__main__right--burger--is--open')!;
+        menuBurger.addEventListener('click', function handleClick() {
+            if(menu.style.transform === "translateX(0px)"){
+                menu.style.transform = "translateX(300px)";
+                menu.style.transition =  "transform ease-in .5s";
+                for (let i = 0; i < fshfjk.length; i++) {
+                    fshfjk[2].style.width = '2em';
+                    fshfjk[2].style.opacity = '1';
+                    fshfjk[0].style.transform = 'rotate(0deg)';
+                    fshfjk[0].style.transformOrigin = 'center';
+                    fshfjk[1].style.transform = 'rotate(0deg)';
+                    fshfjk[1].style.marginTop = '0px';
+                    fshfjk[i].style.transition =  "opacity ease-in .5s, width ease-in .5s, transform ease-in .5s, margin-top ease-in .5s";
+                }
+            } else {
+                menu.style.transform = "translateX(0px)";
+                menu.style.transition = "transform ease-in .5s";
+                for (let i = 0; i < fshfjk.length; i++) {
+                    fshfjk[2].style.width = '0%';
+                    fshfjk[2].style.opacity = '0';
+                    fshfjk[0].style.transform = 'rotate(-45deg)';
+                    fshfjk[0].style.transformOrigin = 'center';
+                    fshfjk[1].style.transform = 'rotate(45deg)';
+                    fshfjk[1].style.marginTop = '-6px';
+                    fshfjk[i].style.transition =  "opacity ease-in .2s, width ease-in .2s, transform ease-in .5s";
+                }
+            };
+        });
     },
     clickOnProject: function(){
         const articleDetail = document.querySelectorAll<HTMLInputElement>('.view__detail');
-        const article1 = document.querySelectorAll<HTMLInputElement>('.view__time__side__item__1');
-        const article2 = document.querySelectorAll<HTMLInputElement>('.view__time__side__item__2');
-        const article3 = document.querySelectorAll<HTMLInputElement>('.view__time__side__item__3');
-        const article4 = document.querySelectorAll<HTMLInputElement>('.view__time__side__item__4');
-        const article5 = document.querySelectorAll<HTMLInputElement>('.view__time__side__item__5');
-        if (article1 != null && article2 != null && article3 != null && article4 != null && article5 != null){
+        const article1 = document.querySelectorAll<HTMLInputElement>('.view__time__side__item__1')!;
+        const article2 = document.querySelectorAll<HTMLInputElement>('.view__time__side__item__2')!;
+        const article3 = document.querySelectorAll<HTMLInputElement>('.view__time__side__item__3')!;
+        const article4 = document.querySelectorAll<HTMLInputElement>('.view__time__side__item__4')!;
+        const article5 = document.querySelectorAll<HTMLInputElement>('.view__time__side__item__5')!;
+        // if (article1 != null && article2 != null && article3 != null && article4 != null && article5 != null){
             articleDetail?.forEach(article => {
                 article.classList.forEach(number => {
                     article1?.forEach(element => {
@@ -68,29 +85,27 @@ const app : {
                     });
                 });
             });
-        };
+        // };
     },
     openDetails: function(detailArticle : String) {
-        const details = document.querySelector<HTMLInputElement>(`.view__detail__${detailArticle}`);
-        const container = document.querySelector<HTMLInputElement>('.container');
-        const btnClose = document.querySelectorAll<HTMLInputElement>('.close');
-        if( details != null && container != null && btnClose != null){
-            if (details.style.display === 'none') {
-                details.style.display = 'block';
-                container.style.display = 'none';
-            } else {
-                details.style.display = 'none';
-                container.style.display = 'block';
-            };
-            btnClose.forEach(btn => {
-                btn.addEventListener('click', function handleClick() {
-                    if(details.style.display === 'block') {
-                        details.style.display = 'none';
-                        container.style.display = 'block';
-                    };
-                });
-            });
+        const details = document.querySelector<HTMLInputElement>(`.view__detail__${detailArticle}`)!;
+        const container = document.querySelector<HTMLInputElement>('.container')!;
+        const btnClose = document.querySelectorAll<HTMLInputElement>('.close')!;
+        if (details.style.display === 'block') {
+            details.style.display = 'none';
+            container.style.display = 'block';
+        } else {
+            details.style.display = 'block';
+            container.style.display = 'none';
         };
+        btnClose.forEach(btn => {
+            btn.addEventListener('click', function handleClick() {
+                if(details.style.display === 'block') {
+                    details.style.display = 'none';
+                    container.style.display = 'block';
+                };
+            });
+        });
     },
     chooseLanguage: function() {
         const language = document.querySelector<HTMLInputElement>(".language");

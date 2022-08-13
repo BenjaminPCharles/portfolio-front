@@ -2,21 +2,37 @@
 var app = {
     clickOnMenuBurger: function () {
         var menuBurger = document.querySelector('.view__header__menu');
+        var fshfjk = document.querySelectorAll('.view__header__menu__burger');
         var menu = document.querySelector('.view__home__main__right--burger--is--open');
-        if (menuBurger != null && menu != null) {
-            menuBurger.addEventListener('click', function handleClick() {
-                if (menu.style.transform === "translateX(300px)") {
-                    menu.style.transform = "translateX(0px)";
-                    menu.style.transition = "transform ease-in .5s";
+        menuBurger.addEventListener('click', function handleClick() {
+            if (menu.style.transform === "translateX(0px)") {
+                menu.style.transform = "translateX(300px)";
+                menu.style.transition = "transform ease-in .5s";
+                for (var i = 0; i < fshfjk.length; i++) {
+                    fshfjk[2].style.width = '2em';
+                    fshfjk[2].style.opacity = '1';
+                    fshfjk[0].style.transform = 'rotate(0deg)';
+                    fshfjk[0].style.transformOrigin = 'center';
+                    fshfjk[1].style.transform = 'rotate(0deg)';
+                    fshfjk[1].style.marginTop = '0px';
+                    fshfjk[i].style.transition = "opacity ease-in .5s, width ease-in .5s, transform ease-in .5s, margin-top ease-in .5s";
                 }
-                else {
-                    menu.style.transform = "translateX(300px)";
-                    menu.style.transition = "transform ease-in .5s";
+            }
+            else {
+                menu.style.transform = "translateX(0px)";
+                menu.style.transition = "transform ease-in .5s";
+                for (var i = 0; i < fshfjk.length; i++) {
+                    fshfjk[2].style.width = '0%';
+                    fshfjk[2].style.opacity = '0';
+                    fshfjk[0].style.transform = 'rotate(-45deg)';
+                    fshfjk[0].style.transformOrigin = 'center';
+                    fshfjk[1].style.transform = 'rotate(45deg)';
+                    fshfjk[1].style.marginTop = '-6px';
+                    fshfjk[i].style.transition = "opacity ease-in .2s, width ease-in .2s, transform ease-in .5s";
                 }
-                ;
-            });
-        }
-        ;
+            }
+            ;
+        });
     },
     clickOnProject: function () {
         var articleDetail = document.querySelectorAll('.view__detail');
@@ -25,79 +41,77 @@ var app = {
         var article3 = document.querySelectorAll('.view__time__side__item__3');
         var article4 = document.querySelectorAll('.view__time__side__item__4');
         var article5 = document.querySelectorAll('.view__time__side__item__5');
-        if (article1 != null && article2 != null && article3 != null && article4 != null && article5 != null) {
-            articleDetail === null || articleDetail === void 0 ? void 0 : articleDetail.forEach(function (article) {
-                article.classList.forEach(function (number) {
-                    article1 === null || article1 === void 0 ? void 0 : article1.forEach(function (element) {
-                        element.addEventListener('click', function handleClick() {
-                            if (parseInt(number) === parseInt(element === null || element === void 0 ? void 0 : element.id) || parseInt(element === null || element === void 0 ? void 0 : element.id) === 6) {
-                                app.openDetails("1");
-                            }
-                            ;
-                        });
+        // if (article1 != null && article2 != null && article3 != null && article4 != null && article5 != null){
+        articleDetail === null || articleDetail === void 0 ? void 0 : articleDetail.forEach(function (article) {
+            article.classList.forEach(function (number) {
+                article1 === null || article1 === void 0 ? void 0 : article1.forEach(function (element) {
+                    element.addEventListener('click', function handleClick() {
+                        if (parseInt(number) === parseInt(element === null || element === void 0 ? void 0 : element.id) || parseInt(element === null || element === void 0 ? void 0 : element.id) === 6) {
+                            app.openDetails("1");
+                        }
+                        ;
                     });
-                    article2 === null || article2 === void 0 ? void 0 : article2.forEach(function (element) {
-                        element.addEventListener('click', function handleClick() {
-                            if (parseInt(number) === parseInt(element === null || element === void 0 ? void 0 : element.id) || parseInt(element === null || element === void 0 ? void 0 : element.id) === 7) {
-                                app.openDetails("2");
-                            }
-                            ;
-                        });
+                });
+                article2 === null || article2 === void 0 ? void 0 : article2.forEach(function (element) {
+                    element.addEventListener('click', function handleClick() {
+                        if (parseInt(number) === parseInt(element === null || element === void 0 ? void 0 : element.id) || parseInt(element === null || element === void 0 ? void 0 : element.id) === 7) {
+                            app.openDetails("2");
+                        }
+                        ;
                     });
-                    article3 === null || article3 === void 0 ? void 0 : article3.forEach(function (element) {
-                        element.addEventListener('click', function handleClick() {
-                            if (parseInt(number) === parseInt(element === null || element === void 0 ? void 0 : element.id) || parseInt(element === null || element === void 0 ? void 0 : element.id) === 8) {
-                                app.openDetails("3");
-                            }
-                            ;
-                        });
+                });
+                article3 === null || article3 === void 0 ? void 0 : article3.forEach(function (element) {
+                    element.addEventListener('click', function handleClick() {
+                        if (parseInt(number) === parseInt(element === null || element === void 0 ? void 0 : element.id) || parseInt(element === null || element === void 0 ? void 0 : element.id) === 8) {
+                            app.openDetails("3");
+                        }
+                        ;
                     });
-                    article4 === null || article4 === void 0 ? void 0 : article4.forEach(function (element) {
-                        element.addEventListener('click', function handleClick() {
-                            if (parseInt(number) === parseInt(element === null || element === void 0 ? void 0 : element.id) || parseInt(element === null || element === void 0 ? void 0 : element.id) === 9) {
-                                app.openDetails("4");
-                            }
-                            ;
-                        });
+                });
+                article4 === null || article4 === void 0 ? void 0 : article4.forEach(function (element) {
+                    element.addEventListener('click', function handleClick() {
+                        if (parseInt(number) === parseInt(element === null || element === void 0 ? void 0 : element.id) || parseInt(element === null || element === void 0 ? void 0 : element.id) === 9) {
+                            app.openDetails("4");
+                        }
+                        ;
                     });
-                    article5 === null || article5 === void 0 ? void 0 : article5.forEach(function (element) {
-                        element.addEventListener('click', function handleClick() {
-                            if (parseInt(number) === parseInt(element === null || element === void 0 ? void 0 : element.id) || parseInt(element === null || element === void 0 ? void 0 : element.id) === 10) {
-                                app.openDetails("5");
-                            }
-                            ;
-                        });
+                });
+                article5 === null || article5 === void 0 ? void 0 : article5.forEach(function (element) {
+                    element.addEventListener('click', function handleClick() {
+                        if (parseInt(number) === parseInt(element === null || element === void 0 ? void 0 : element.id) || parseInt(element === null || element === void 0 ? void 0 : element.id) === 10) {
+                            app.openDetails("5");
+                        }
+                        ;
                     });
                 });
             });
-        }
-        ;
+        });
+        // };
     },
     openDetails: function (detailArticle) {
         var details = document.querySelector(".view__detail__".concat(detailArticle));
         var container = document.querySelector('.container');
         var btnClose = document.querySelectorAll('.close');
-        if (details != null && container != null && btnClose != null) {
-            if (details.style.display === 'none') {
-                details.style.display = 'block';
-                container.style.display = 'none';
-            }
-            else {
-                details.style.display = 'none';
-                container.style.display = 'block';
-            }
-            ;
-            btnClose.forEach(function (btn) {
-                btn.addEventListener('click', function handleClick() {
-                    if (details.style.display === 'block') {
-                        details.style.display = 'none';
-                        container.style.display = 'block';
-                    }
-                    ;
-                });
-            });
+        // if( details != null && container != null && btnClose != null){
+        if (details.style.display === 'block') {
+            details.style.display = 'none';
+            container.style.display = 'block';
+        }
+        else {
+            details.style.display = 'block';
+            container.style.display = 'none';
         }
         ;
+        btnClose.forEach(function (btn) {
+            btn.addEventListener('click', function handleClick() {
+                if (details.style.display === 'block') {
+                    details.style.display = 'none';
+                    container.style.display = 'block';
+                }
+                ;
+            });
+        });
+        // };
     },
     chooseLanguage: function () {
         var language = document.querySelector(".language");

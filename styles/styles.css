@@ -64,7 +64,7 @@ body {
 
 
 .view__header {
-    /* height: 5vh; */
+    height: 5vh;
     display: flex;
     /* justify-content: space-between; */
     justify-content: flex-end;
@@ -80,7 +80,7 @@ body {
     letter-spacing: .1em;
 }
 .view__header__menu {
-    margin-right: 1em;
+    margin: 1em;
 }
 .view__header__menu__burger {
     background-color: #FFF;
