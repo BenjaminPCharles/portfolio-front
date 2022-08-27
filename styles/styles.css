@@ -837,6 +837,11 @@ body {
         display: flex;
         justify-content: start;
     }
+
+    .view__contact {
+        flex-direction: column;
+    }
+
     .view__time__mobile {
         width: 5px;
         background-color: #DCD9F2;
